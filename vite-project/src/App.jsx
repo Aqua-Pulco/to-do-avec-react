@@ -4,7 +4,7 @@ import reactLogo from "./assets/react.svg";
 import { deleteItem } from "./functions";
 import InputForm from "./components/InputForm";
 import TaskList from "./components/TaskList";
-import Bulle from "./components/Bulle"; // ← ✅ tu ajoutes juste ça
+import Bulle from "./components/Bulle"; 
 import "./App.css";
 
 export default function App() {
@@ -24,7 +24,7 @@ export default function App() {
 
   function faireBoom() {
     alert("🧷 BOOM !");
-    addItem("Nettoyer ballon crevé"); // ← tu peux activer ça si tu veux
+    addItem("Nettoyer ballon crevé");
   }
 
   return (
@@ -34,23 +34,22 @@ export default function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-
       <h1>step 1</h1>
       <div className="card">
         <label>
           Champ de saisie textuel :{" "}
-          <input onChange={(e) => setValue(e.target.value)} />
+          <input onChange={(e) => setValue(e.target.value)}/>
         </label>
         <p>Tu as tapé : {value}</p>
       </div>
 
-      <h1>step 2-3</h1>
-      <InputForm onAdd={addItem} />
+      <h1>step 2-3</h1> 
+      <InputForm onAdd={addItem} /> 
       <TaskList tab={tab} onDelete={deleteButton} />
-
+    
       <h1>step 4</h1>
       <p></p>
-      <Bulle onExplosion={faireBoom} /> {/* ← on branche juste ici */}
+      <Bulle onExplosion={faireBoom} />
     </>
   );
 }
