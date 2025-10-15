@@ -63,7 +63,7 @@ setTruc ───────────→ │ mise à jour (écriture)
 
 # 🧪 C’est quoi un “hook” alors ?
 
-Un hook, c’est une fonction spéciale de React, qui :
+Un hook, c’est une fonction spéciale de React
 
     → useState, useEffect, useRef, etc.
 
@@ -160,7 +160,7 @@ export default function TaskList({ tab }) {
 }
 ```
 Tu donnes un tableau (ex. des tâches).
-Le composant fait une boucle map() pour afficher chaque élément dans un <li>.
+Le composant fait une boucle map() pour afficher chaque élément dans un ```<li>```.
 C’est un composant qui “lit” un tableau.
 
 # 📲 4. Composant avec callback vers le parent
@@ -197,7 +197,8 @@ export default function InputForm({ onAdd }) {
 }
 
 ```
-Tu envoies un message vers le parent App via onAdd. (onAdd = addItem(text) a un tableau)
+Tu envoies un message vers le parent App via onAdd.
+autrement dit : onAdd = addItem(text) 
 Quand l’utilisateur soumet un formulaire, la valeur est transmise vers App.
 C’est une brique qui remonte l’info vers le parent.
 
