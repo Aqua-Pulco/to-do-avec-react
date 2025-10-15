@@ -1,10 +1,8 @@
-
-````md
-## REACT auto-explication
+### REACT auto-explication
 
 ---
 
-### # App
+## App
 
 Généralement, `App` est le **composant principal**  
 → il reflète le DOM, c’est le **parent**
@@ -18,7 +16,7 @@ via des **canaux de transmission** : les **props**
        │         │    fonction passée au component 
        │      prop       via 'onAdd' 
    composant
-````
+```
 
 Autrement dit :
 
