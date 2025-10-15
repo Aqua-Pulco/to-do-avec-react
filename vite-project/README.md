@@ -23,8 +23,8 @@ Autrement dit :
 > `onAdd` dans `InputForm` = `addItem`
 
 ---
-
-### # Déclaration
+# Les hooks
+### Déclaration
 
 On déclare des variables (ou des tableaux) avec `useState` :
 
@@ -43,6 +43,30 @@ const [var, setVar] = useState('')
 
 > Ex :
 > `setVar(43)` modifie la valeur de `var` ---> met à jour 
+
+Imagine que chaque composant React a besoin de se souvenir de quelque chose :
+  un nom, une case cochée, une liste, un compteur…
+
+Mais React est amnésique par défaut : à chaque rendu, il oublie tout.
+  Donc tu lui dis :
+
+```java
+
+       ┌────────────┐
+truc ←┤ MÉMOIRE     │ ← valeur actuelle (lecture)
+       └────────────┘
+       ┌────────────┐
+setTruc ───────────→ │ mise à jour (écriture)
+       └────────────┘
+
+```
+
+# 🧪 C’est quoi un “hook” alors ?
+
+Un hook, c’est une fonction spéciale de React, qui :
+
+    → useState, useEffect, useRef, etc.
+
 
 ---
 
