@@ -1,20 +1,26 @@
 import { useRef, useState } from "react";
 import reactLogo from "./assets/react.svg";
-
+import Ongoing from "./components/Ongoing";
 import { deleteItem } from "./functions";
 import InputForm from "./components/InputForm";
 import TaskList from "./components/TaskList";
-import Bulle from "./components/Bulle"; 
+import Bulle from "./components/Bulle";
 import "./App.css";
 
 export default function App() {
   const [value, setValue] = useState("");
   const [tab, setTab] = useState([]);
+  const [ongo, setOngo] = useState([]);
   const compt = useRef(0);
 
   function addItem(text) {
-    const newTab = [...tab, { id: compt.current++, value: text }];
+    const newTab = [ ...tab, { id: compt.current++, value: text }];
     setTab(newTab);
+  }
+
+  function addOngo(id, value) {
+    const array = [ ...ongo, { id: id, value: value }];
+    setOngo(array);
   }
 
   function deleteButton(id) {
@@ -38,15 +44,20 @@ export default function App() {
       <div className="card">
         <label>
           Champ de saisie textuel :{" "}
-          <input onChange={(e) => setValue(e.target.value)}/>
+          <input
+            onChange={(e) => {
+              setValue(e.target.value);
+            }}
+          />
         </label>
         <p>Tu as tapé : {value}</p>
       </div>
 
-      <h1>step 2-3</h1> 
-      <InputForm onAdd={addItem} /> 
-      <TaskList tab={tab} onDelete={deleteButton} />
-    
+      <h1>step 2-3</h1>
+      <InputForm onAdd={addItem} />
+      <TaskList tab={tab} onDelete={deleteButton} onAdd={addOngo} />
+      <Ongoing array={ongo}/>
+
       <h1>step 4</h1>
       <p></p>
       <Bulle onExplosion={faireBoom} />

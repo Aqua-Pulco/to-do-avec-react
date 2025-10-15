@@ -40,8 +40,19 @@
   padding: 2em;
 }
 
+.listLine{
 
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
 
-.read-the-docs {
-  color: #888;
+.checkbox{
+  margin-right: 3rem;
+}
+
+.list{
+  border:1px;
+  border-color:#90c8d8aa;
+  border-radius: 25%;
 }
