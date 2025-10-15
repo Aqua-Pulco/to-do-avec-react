@@ -46,7 +46,7 @@ const [var, setVar] = useState('')
 
 ---
 
-### # Modifier un tableau
+### Modifier un tableau
 
 ```js
 function addItem(text) {
@@ -59,12 +59,12 @@ Explication :
 
 * (React exige une copie, jamais une mutation directe)
 
-🧠 **Image** : on a besoin d'un tableau intermediaire, on y ajoute la valeur
-                et puis on re écrit tab avec
+🧠 **Image** : on a besoin d'un tableau intermédiaire, on y ajoute la valeur
+                et puis on 'écrase' tab avec
 
 ---
 
-### # Composants
+### Composants
 
 On crée un dossier `components/`
 → on y construit nos **petites briques de page**
