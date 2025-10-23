@@ -1,11 +1,17 @@
 import TaskItem from "./TaskItem";
 
+export default function TaskList({ tasks, onDelete, onAdd }) {
+  const todoTasks = tasks.filter(task => task.status === "todo");
 
-export default function TaskList({ tab, onDelete, onAdd }) {
   return (
     <ul className="list">
-      {tab.map((el) => ( 
-        <TaskItem key={el.id} el={el} onDelete={onDelete} onAdd={onAdd}/> 
+      {todoTasks.map(task => (
+        <TaskItem
+          key={task.id}
+          el={task}
+          onDelete={onDelete}
+          onAdd={onAdd}
+        />
       ))}
     </ul>
   );

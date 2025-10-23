@@ -10,7 +10,6 @@ export function deleteItem(array, li_Id) {
 
 export function handleCheckbox(e) {
   console.log(e.target.value);
-  if (e.target.checked) {
-    return true;
-  } else return false;
+  console.log(e.target);
+  
 }
