@@ -6,6 +6,7 @@ import Bulle from "./components/Bulle";
 import "./App.css";
 
 export default function App() {
+  //manipuler value input
   const [value, setValue] = useState("");
   //manipule lignes de la liste
   const [tasks, setTasks] = useState([]);
